@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: social-front-service
+  namespace: default
+spec:
+  type: ClusterIP
+  selector:
+    app: frontend
+  ports:
+    - protocol: TCP
+      port: 80        # Port that the LoadBalancer will expose
+      targetPort: 3000 # Port on the container that the LoadBalancer will forward traffic to  
