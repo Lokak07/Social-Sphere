@@ -4,7 +4,7 @@ metadata:
   name: social-front-service
   namespace: default
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: frontend
   ports:
